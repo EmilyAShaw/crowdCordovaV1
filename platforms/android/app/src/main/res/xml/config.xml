@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.crowd.group" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
+    </feature>
+    <feature name="StatusBar">
+        <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <name>Crowd</name>
+    <description>
+        An application which mapps out nearby events and nearby friends.
+    </description>
+    <author email="emily.shaw123@hotmail.com" href="https://emilyshawdesign.surge.sh">
+        Crowd Event Team:
+        Backend Javascript/firebase: Rick Dodds
+        Front end HTML/CSS, Javascript: Mikayla Mclean, Emily Shaw
+        Front end map Javascript development: Andrew Bielsky
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
+        <string>need camera access to take pictures</string>
+    </edit-config>
+    <edit-config file="*-Info.plist" mode="merge" target="NSPhotoLibraryUsageDescription">
+        <string>need photo library access to get pictures from there</string>
+    </edit-config>
+    <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
+        <string>need location access to find things nearby</string>
+    </edit-config>
+    <edit-config file="*-Info.plist" mode="merge" target="NSPhotoLibraryAddUsageDescription">
+        <string>need photo library access to save pictures there</string>
+    </edit-config>
+    <allow-intent href="market:*" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="Orientation" value="portrait" />
+    <preference name="deployment-target" value="7.0" />
+    <preference name="SuppressLongPressGesture" value="true" />
+    <preference name="Suppress3DTouchGesture" value="true" />
+    <preference name="InAppBrowserStorageEnabled" value="true" />
+</widget>

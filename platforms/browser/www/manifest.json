@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Crowd",
+  "short_name": "Crowd",
+  "version": "com.crowd.group",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "author": "Apache Cordova Team",
+  "icons": [],
+  "start_url": "index.html"
+}

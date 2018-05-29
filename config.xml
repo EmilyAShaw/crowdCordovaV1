@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.crowd.group" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Crowd</name>
+    <description>
+        An application which mapps out nearby events and nearby friends.
+    </description>
+    <author email="emily.shaw123@hotmail.com" href="https://emilyshawdesign.surge.sh">
+        Crowd Event Team:
+        Backend Javascript/firebase: Rick Dodds
+        Front end HTML/CSS, Javascript: Mikaela Mclean, Emily Shaw
+        Front end map Javascript development: Andrew Bielsky
+    </author>
+    <content src="index.html" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <plugin name="cordova-plugin-geolocation" spec="^4.0.1" />
+    <plugin name="cordova-plugin-dialogs" spec="^2.0.1" />
+    <plugin name="cordova-plugin-statusbar" spec="^2.4.2" />
+    <engine name="browser" spec="~5.0.3" />
+    <engine name="ios" spec="~4.5.4" />
+    <plugin name="cordova-plugin-camera" spec="^4.0.3" />
+    <preference name = "Orientation" value = "portrait"/>
+    <preference name = "Orientation" value = "portrait"/>
+    <preference name = "deployment-target" value = "7.0"/>
+    <preference name = "SuppressLongPressGesture" value = "true"/>
+    <preference name = "Suppress3DTouchGesture" value = "true"/>
+   <preference name = "InAppBrowserStorageEnabled" value = "true"/>
+   <preference name = "DisallowOverscroll" value = "true"/>
+   <preference name = "UIWebViewBounce" value = "true"/>
+    
+    <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
+    <string>need camera access to take pictures</string>
+</edit-config>
+<edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
+    <string>need photo library access to get pictures from there</string>
+</edit-config>
+<edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
+    <string>need location access to find things nearby</string>
+</edit-config>
+<edit-config target="NSPhotoLibraryAddUsageDescription" file="*-Info.plist" mode="merge">
+    <string>need photo library access to save pictures there</string>
+</edit-config>
+</widget>
